@@ -1,5 +1,6 @@
 package fun.concurrency.challenges.tools;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 /**
@@ -16,5 +17,5 @@ public interface HeavyLifter<T, R> {
      * @param heavyStuff input object
      * @return {@link CompletionStage} which gives an option for the client to extend computation stages
      */
-    CompletionStage<R> compute(T heavyStuff);
+    CompletableFuture<R> compute(T heavyStuff);
 }
